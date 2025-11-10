@@ -1,4 +1,4 @@
-from order_history_page import OrderHistoryPage
+from playwright_ecommerce.pageObjects.orderHistoryPage import OrderHistoryPage
 
 class DashboardPage:
     def __init__(self, page):

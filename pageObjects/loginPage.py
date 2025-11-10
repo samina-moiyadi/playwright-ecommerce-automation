@@ -1,5 +1,7 @@
 from pytest_playwright.pytest_playwright import page
-from .dashboard_page import DashboardPage
+
+from playwright_ecommerce.pageObjects.dashboardPage import DashboardPage
+
 
 class LoginPage:
     def __init__(self, page):

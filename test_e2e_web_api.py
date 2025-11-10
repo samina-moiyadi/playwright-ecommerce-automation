@@ -1,11 +1,12 @@
-import json
+import sys
 from pathlib import Path
+import json
 
 import pytest
 from playwright.sync_api import Playwright
 
-from playwright_ecommerce.pageObjects.login_page import LoginPage
-from playwright_ecommerce.utils.api_utils import APIUtils
+from playwright_ecommerce.pageObjects.loginPage import LoginPage
+from playwright_ecommerce.utils.apiUtils import APIUtils
 
 # -------------------------------
 # Load user credentials from JSON
@@ -13,7 +14,8 @@ from playwright_ecommerce.utils.api_utils import APIUtils
 # The credentials are stored externally in a JSON file for easy maintenance
 # and data-driven testing of multiple users.
 BASE_DIR = Path(__file__).resolve().parent.parent
-data_path = BASE_DIR / "data" / "credentials.json"
+sys.path.append(str(BASE_DIR))
+data_path = BASE_DIR / "playwright_ecommerce" / "data" / "credentials.json"
 
 with open(data_path, "r") as f:
     test_data = json.load(f)

@@ -1,4 +1,4 @@
-from order_details_page import OrderDetailsPage
+from playwright_ecommerce.pageObjects.orderDetailsPage import OrderDetailsPage
 
 class OrderHistoryPage:
     """
